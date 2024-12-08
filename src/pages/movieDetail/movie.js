@@ -27,6 +27,7 @@ const Movie = () => {
           src={`https://image.tmdb.org/t/p/original${
             currentMovieDetail ? currentMovieDetail.backdrop_path : ""
           }`}
+          alt=""
         />
       </div>
       <div className="movie__detail">
@@ -37,6 +38,7 @@ const Movie = () => {
               src={`https://image.tmdb.org/t/p/original${
                 currentMovieDetail ? currentMovieDetail.poster_path : ""
               }`}
+              alt=""
             />
           </div>
         </div>
@@ -85,23 +87,12 @@ const Movie = () => {
       </div>
       <div className="movie__links">
         <div className="movie__heading">Useful Links</div>
-        {currentMovieDetail && currentMovieDetail.homepage && (
-          <a
-            href={currentMovieDetail.homepage}
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
-            <p>
-              <span className="movie__homeButton movie__Button">
-                Homepage <i className="newTab fas fa-external-link-alt"></i>
-              </span>
-            </p>
-          </a>
-        )}
+
         {currentMovieDetail && currentMovieDetail.imdb_id && (
           <a
             href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id}
             target="_blank"
+            rel="noreferrer"
             style={{ textDecoration: "none" }}
           >
             <p>
@@ -125,6 +116,7 @@ const Movie = () => {
                     src={
                       "https://image.tmdb.org/t/p/original" + company.logo_path
                     }
+                    alt={company.name}
                   />
                   <span>{company.name}</span>
                 </span>

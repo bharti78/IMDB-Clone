@@ -12,3 +12,33 @@
   flex-wrap: wrap ;
   justify-content: center;
 }
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .movie__list {
+    padding: 0 1.5rem 2rem 1.5rem; /* Reduced padding for tablets */
+  }
+
+  .list__title {
+    font-size: 1.5rem; /* Slightly smaller title font size */
+    margin: 2rem;
+  }
+
+  .list__cards {
+    gap: 0.8rem; /* Adjust spacing between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie__list {
+    padding: 0 1rem 1.5rem 1rem; /* Further reduced padding for small devices */
+  }
+
+  .list__title {
+    font-size: 1.25rem; /* Smaller font size for small screens */
+    margin: 1.5rem;
+  }
+
+  .list__cards {
+    gap: 0.5rem; /* Reduced gap between cards */
+  }
+}

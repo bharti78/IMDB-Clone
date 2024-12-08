@@ -1,17 +1,35 @@
+
 .header {
   margin: 0 2.5rem;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   align-items: center;
-  display: flex;
+  display: block;
   justify-content: space-between;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+  }
 }
 
 .headerLeft, .headerRight {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-a > span{
+.headerRight {
+  transition: max-height 0.3s ease;
+}
+
+.headerRight.showMenu {
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+a > span {
   margin: 0 30px;
   font-size: 1.3rem;
   cursor: pointer;
@@ -27,6 +45,59 @@ a > span:hover {
   cursor: pointer;
 }
 
-.user__avatar {
+.hamburger {
+  display: none;
   font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .header {
+    margin: 0 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .headerRight {
+    flex-direction: column;
+    gap: 16px;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .headerRight.showMenu {
+    max-height: 200px;
+  }
+
+  a > span {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  .header__icon {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    margin: 0 0.5rem;
+  }
+
+  a > span {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+
+  .header__icon {
+    width: 50px;
+  }
 }

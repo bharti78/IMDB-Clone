@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   width:100%;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
   background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
   opacity: 1;
@@ -50,4 +50,83 @@
   display: flex;
   text-align: left;
   width: 50%;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .posterImage {
+    height: 500px; /* Adjusted height for smaller screens */
+  }
+
+  .posterImage__overlay {
+    padding: 2rem; /* Reduced padding */
+  }
+
+  .posterImage__title {
+    font-size: 3rem; /* Smaller title font size */
+  }
+
+  .posterImage__runtime {
+    font-size: 1.5rem; /* Adjust runtime font size */
+  }
+
+  .posterImage__description {
+    font-size: 0.9rem; /* Adjust description font size */
+    width: 60%; /* Increase width for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .posterImage {
+    height: 400px; /* Further reduced height for tablets */
+  }
+
+  .posterImage__overlay {
+    padding: 1.5rem;
+  }
+
+  .posterImage__title {
+    font-size: 2.5rem;
+  }
+
+  .posterImage__runtime {
+    font-size: 1.2rem;
+  }
+
+  .posterImage__description {
+    display: none;
+    font-size: 0.8rem;
+    width: 70%; /* Increase description width */
+  }
+}
+
+@media (max-width: 480px) {
+  .posterImage {
+    height: 300px; /* Smaller height for mobile devices */
+  }
+
+  .posterImage__overlay {
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  .posterImage__title {
+    font-size: 1.6rem; /* Adjust title font size for mobile */
+    text-align: center; /* Center align for better mobile experience */
+  }
+
+  .posterImage__runtime {
+    /* display: none; */
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .posterImage__rating {
+    margin-left: 10px; /* Remove margin for better alignment */
+  }
+
+  .posterImage__description {
+    font-size: 0.75rem;
+    width: 90%; /* Full width for small screens */
+    text-align: center; /* Center-align for smaller screens */
+  }
 }

@@ -60,3 +60,38 @@
   font-size: .75rem;
   margin-bottom: 0.25rem;
 }
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .cards {
+    min-width: 140px; /* Adjust card width for smaller screens */
+    height: 200px; /* Adjust card height for smaller screens */
+  }
+
+  .card__title {
+    font-size: 0.85rem; /* Slightly smaller title */
+  }
+
+  .card__runtime,
+  .card__description {
+    font-size: 0.65rem; /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    min-width: 120px; /* Smaller width for very small screens */
+    height: 180px;
+    margin: 0.25rem; /* Reduce margin */
+  }
+
+  .card__title {
+    font-size: 0.75rem;
+  }
+
+  .card__runtime,
+  .card__description {
+    font-size: 0.6rem;
+  }
+}
