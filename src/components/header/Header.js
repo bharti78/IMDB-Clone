@@ -15,7 +15,7 @@ const Header = () => {
         <Link to="/">
           <img
             className="header__icon"
-            src="https://l1nq.com/vy25j07"
+            src="https://images.apifyusercontent.com/2VzvjVvStorTfyEz7GrK2sLJxlJs8m_E6aULJfSEj4Q/rs:fill:250:250/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS9wb1d1WVBtYmZMR0JuNU1mOC9vRTlvU2V5YzdoZXFhWEVidC1pbWRiLnBuZw.webp"
             alt="IMDB Logo"
           />
         </Link>
